@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Розклад руху потягів</title> 
+    <style>
+        table {
+            width: 60%;
+            margin: 0 auto 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        #saver {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+        }
+        button {
+            padding: 5px 15px 5px;
+        }
+        .hide {
+            display: none;
+        }
+        span {
+            padding: 0 5px 0;
+            cursor: pointer;
+        }
+    </style>   
+</head>
+<body>
+    <table>
+        <thead>
+            <tr class="uaHead hide">
+                <th>
+                    <span data-type="number_down">&darr;</span> 
+                    Номер потягу 
+                    <span data-type="number_up">&uarr;</span>
+                </th>
+                <th>
+                    <span data-type="text_down">&darr;</span> 
+                    Маршрут
+                    <span data-type="text_up">&uarr;</span>
+                </th>
+                <th>
+                    День тижня                     
+                </th>
+                <th>
+                    <span data-type="time_down">&darr;</span> 
+                    Відправлення
+                    <span data-type="time_up">&uarr;</span>
+                </th>
+                <th>
+                    <span data-type="time_down">&darr;</span>
+                     Прибуття
+                     <span data-type="time_up">&uarr;</span>
+                </th>
+                <th>
+                    <span data-type="number_down">&darr;</span>
+                     Вартість, грн
+                     <span data-type="number_up">&uarr;</span>
+                 </th>
+            </tr>
+            <tr class="enHead hide">
+                <th>
+                    <span data-type="number_down">&darr;</span> 
+                    Train number 
+                    <span data-type="number_up">&uarr;</span>
+                </th>
+                <th>
+                    <span data-type="text_down">&darr;</span> 
+                    Route
+                    <span data-type="text_up">&uarr;</span>
+                </th>
+                <th>
+                    Week day                     
+                </th>
+                <th>
+                    <span data-type="time_down">&darr;</span> 
+                    Dispatch
+                    <span data-type="time_up">&uarr;</span>
+                </th>
+                <th>
+                    <span data-type="time_down">&darr;</span>
+                     Arrival
+                     <span data-type="time_up">&uarr;</span>
+                </th>
+                <th>
+                    <span data-type="number_down">&darr;</span>
+                     Ticket price, hrn
+                     <span data-type="number_up">&uarr;</span>
+                 </th>
+            </tr>                
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <button id="lang">En/Ua</button>
+    <script src="train_schedule.json"></script>
+    <script src="train.js"></script>
+</body>
+</html>
