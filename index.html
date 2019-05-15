@@ -3,31 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Розклад руху потягів</title> 
-    <style>
-        table {
-            width: 60%;
-            margin: 0 auto 0;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        #saver {
-            display: block;
-            text-align: center;
-            margin-top: 25px;
-        }
-        button {
-            padding: 5px 15px 5px;
-        }
-        .hide {
-            display: none;
-        }
-        span {
-            padding: 0 5px 0;
-            cursor: pointer;
-        }
-    </style>   
+    <link rel="stylesheet" type="text/css"  href="style.css">  
 </head>
 <body>
     <table>
@@ -98,6 +74,7 @@
         </tbody>
     </table>
     <button id="lang">En/Ua</button>
+    <div class="search"><button id="start_srch">Пошук (search) :</button><input id="search" /></div>    
     <script src="train_schedule.json"></script>
     <script src="train.js"></script>
 </body>

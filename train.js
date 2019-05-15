@@ -99,7 +99,6 @@ function sorting(event) {
 function sortRows (colNum, type) {
     var startArr = [].slice.call(tableBody.rows);
     
-
     var compareCode = function(rowA, rowB) {
         return parseInt(rowA.cells[colNum].innerHTML) - parseInt(rowB.cells[colNum].innerHTML);
     }
@@ -157,5 +156,28 @@ function sortRows (colNum, type) {
 
     for (var i=0; i<startArr.length; i++) {
         tableBody.appendChild(startArr[i]);
+    }    
+}
+
+document.getElementById('start_srch').addEventListener('click', searching);
+
+function searching() {
+    for (var i=0; i<tableBody.rows.length; i++) {
+        for (j=0; j<tableBody.rows[i].cells.length; j++) {
+            tableBody.rows[i].cells[j].classList.remove('light');              
+        }
+    }
+
+    var srchPhr = document.getElementById('search').value;
+    if (srchPhr) {
+        var regexp = new RegExp(srchPhr, 'i');
+        for (var i=0; i<tableBody.rows.length; i++) {
+            for (j=0; j<tableBody.rows[i].cells.length; j++) {
+                if (tableBody.rows[i].cells[j].innerHTML.match(regexp)) {
+                    tableBody.rows[i].cells[j].classList.add('light');
+                }    
+            }
+        }
+    } else { alert('type phrase to search');
     }    
 }
